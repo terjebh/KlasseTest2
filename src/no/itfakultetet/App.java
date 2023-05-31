@@ -1,8 +1,14 @@
 package no.itfakultetet;
 
+import javax.xml.crypto.Data;
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
 
     public static void main(String[] args) {
+
+
 
         Laptop l1 = new Laptop();
         l1.setType("Lenovo Thinkpad X240");
@@ -32,6 +38,11 @@ public class App {
         System.out.println("Antall Servere er nå: " + Server.antallServere);
 
         System.out.println("Antall Datamaskiner totalt er nå: "+Datamaskin.antallMaskiner);
+
+
+
+
+
 
     } // slutt på main
 
