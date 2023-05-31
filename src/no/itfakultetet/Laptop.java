@@ -20,7 +20,9 @@ public class Laptop extends Datamaskin {
         this.type = type;
     }
 
-
+    public void skiftBatteri() {
+        System.out.println("Sendt melding til drift om bytte av batteri for "+this.type);
+    }
 
 
 

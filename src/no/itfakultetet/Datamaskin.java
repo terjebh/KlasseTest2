@@ -1,6 +1,6 @@
 package no.itfakultetet;
 
-public class Datamaskin {
+public class Datamaskin implements DatamaskinITF {
     public static Integer antallMaskiner = 0;
     protected String type;
     protected Integer modell;
@@ -8,6 +8,16 @@ public class Datamaskin {
     private Integer ram;
     private String ramtype;
     private String prosessor;
+
+    @Override
+    public void oppdaterProgramvare() {
+        System.out.println("Oppgraderer programvaren for "+this.type+"....");
+    }
+
+    @Override
+    public void installerProgramvare(String programvare) {
+        System.out.println("Installerer "+programvare+" på "+this.type+"....");
+    }
 
     public String getType() {
         return type;

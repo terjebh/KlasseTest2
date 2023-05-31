@@ -1,6 +1,5 @@
 package no.itfakultetet;
 
-import javax.xml.crypto.Data;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,11 +24,16 @@ public class App {
 
 
         Server s1 = new Server(4);
-        s1.setType("Dell Poweredgde r720");
+        s1.setType("Dell Poweredge r720");
         s1.setModell(2018);
 
         Desktop d1 = new Desktop();
         d1.setType("Lenovo Thinkcentre");
+
+
+        d1.oppdaterProgramvare();
+        l3.oppdaterProgramvare();
+        l2.installerProgramvare("git");
 
         /*
         System.out.println("Antall Laptoper er nå: " + Laptop.antallLaptoper);
@@ -45,6 +49,26 @@ public class App {
         maskiner.add(s1);
 
         maskiner.forEach(System.out::println);
+
+
+        record Menneske (String navn, Integer alder, String adresse) { };
+
+        Menneske ola = new Menneske("Ola",34,"Olaveien 45");
+        Menneske kari = new Menneske("Kari",44,"Kariveien 143");
+
+       // System.out.println(ola.navn+ " er "+ola.alder+" år gammel");
+
+       // System.out.println(kari);
+
+        List<Menneske> folk = new ArrayList<>();
+        folk.add(ola);
+        folk.add(kari);
+
+        folk.forEach(System.out::println);
+
+
+
+
 
 
 
